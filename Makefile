@@ -1,15 +1,15 @@
 HOST_SYSTEM = $(shell uname | cut -f 1 -d_)
 SYSTEM ?= $(HOST_SYSTEM)
 CC      = g++
-CFLAGS  = -c -Wall -std=c++11 -pthread -I/usr/local/include
+CFLAGS  = -c -g3 -Wall -std=c++11 -pthread -I/usr/local/include $(shell pkg-config opencv --cflags)
 ifeq ($(SYSTEM),Darwin)
 LDFLAGS = -L/usr/local/lib -lpthread -lprotobuf -lgrpc++ -lgrpc\
           -lgrpc++_reflection\
-          -ldl
+          -ldl $(shell pkg-config opencv --libs)
 else
 LDFLAGS = -L/usr/local/lib -lprotobuf -pthread -lgrpc++ -lgrpc\
 		  -Wl,--no-as-needed -lgrpc++_reflection -Wl,--as-needed\
-		  -ldl
+		  -ldl $(shell pkg-config opencv --libs)
 endif
 EXECUTABLE_NAME=serving_client
 

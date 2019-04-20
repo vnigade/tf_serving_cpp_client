@@ -6,55 +6,41 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_model_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_model_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ModelSpec;
-}  // namespace protobuf_model_2eproto
-namespace protobuf_predict_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_predict_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PredictRequest_InputsEntry_DoNotUse;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_predict_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PredictResponse_OutputsEntry_DoNotUse;
-}  // namespace protobuf_predict_2eproto
-namespace protobuf_tensor_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_tensor_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_TensorProto;
-}  // namespace protobuf_tensor_2eproto
+extern PROTOBUF_INTERNAL_EXPORT_model_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ModelSpec_model_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_predict_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PredictRequest_InputsEntry_DoNotUse_predict_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_predict_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PredictResponse_OutputsEntry_DoNotUse_predict_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_tensor_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_TensorProto_tensor_2eproto;
 namespace tensorflow {
 namespace serving {
 class PredictRequest_InputsEntry_DoNotUseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PredictRequest_InputsEntry_DoNotUse>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<PredictRequest_InputsEntry_DoNotUse> _instance;
 } _PredictRequest_InputsEntry_DoNotUse_default_instance_;
 class PredictRequestDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PredictRequest>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<PredictRequest> _instance;
 } _PredictRequest_default_instance_;
 class PredictResponse_OutputsEntry_DoNotUseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PredictResponse_OutputsEntry_DoNotUse>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<PredictResponse_OutputsEntry_DoNotUse> _instance;
 } _PredictResponse_OutputsEntry_DoNotUse_default_instance_;
 class PredictResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PredictResponse>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<PredictResponse> _instance;
 } _PredictResponse_default_instance_;
 }  // namespace serving
 }  // namespace tensorflow
-namespace protobuf_predict_2eproto {
-static void InitDefaultsPredictRequest_InputsEntry_DoNotUse() {
+static void InitDefaultsPredictRequest_InputsEntry_DoNotUse_predict_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -64,11 +50,11 @@ static void InitDefaultsPredictRequest_InputsEntry_DoNotUse() {
   ::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_PredictRequest_InputsEntry_DoNotUse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsPredictRequest_InputsEntry_DoNotUse}, {
-      &protobuf_tensor_2eproto::scc_info_TensorProto.base,}};
+::google::protobuf::internal::SCCInfo<1> scc_info_PredictRequest_InputsEntry_DoNotUse_predict_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsPredictRequest_InputsEntry_DoNotUse_predict_2eproto}, {
+      &scc_info_TensorProto_tensor_2eproto.base,}};
 
-static void InitDefaultsPredictRequest() {
+static void InitDefaultsPredictRequest_predict_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -79,12 +65,12 @@ static void InitDefaultsPredictRequest() {
   ::tensorflow::serving::PredictRequest::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_PredictRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsPredictRequest}, {
-      &protobuf_model_2eproto::scc_info_ModelSpec.base,
-      &protobuf_predict_2eproto::scc_info_PredictRequest_InputsEntry_DoNotUse.base,}};
+::google::protobuf::internal::SCCInfo<2> scc_info_PredictRequest_predict_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsPredictRequest_predict_2eproto}, {
+      &scc_info_ModelSpec_model_2eproto.base,
+      &scc_info_PredictRequest_InputsEntry_DoNotUse_predict_2eproto.base,}};
 
-static void InitDefaultsPredictResponse_OutputsEntry_DoNotUse() {
+static void InitDefaultsPredictResponse_OutputsEntry_DoNotUse_predict_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -94,11 +80,11 @@ static void InitDefaultsPredictResponse_OutputsEntry_DoNotUse() {
   ::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_PredictResponse_OutputsEntry_DoNotUse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsPredictResponse_OutputsEntry_DoNotUse}, {
-      &protobuf_tensor_2eproto::scc_info_TensorProto.base,}};
+::google::protobuf::internal::SCCInfo<1> scc_info_PredictResponse_OutputsEntry_DoNotUse_predict_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsPredictResponse_OutputsEntry_DoNotUse_predict_2eproto}, {
+      &scc_info_TensorProto_tensor_2eproto.base,}};
 
-static void InitDefaultsPredictResponse() {
+static void InitDefaultsPredictResponse_predict_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -109,56 +95,58 @@ static void InitDefaultsPredictResponse() {
   ::tensorflow::serving::PredictResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_PredictResponse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsPredictResponse}, {
-      &protobuf_model_2eproto::scc_info_ModelSpec.base,
-      &protobuf_predict_2eproto::scc_info_PredictResponse_OutputsEntry_DoNotUse.base,}};
+::google::protobuf::internal::SCCInfo<2> scc_info_PredictResponse_predict_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsPredictResponse_predict_2eproto}, {
+      &scc_info_ModelSpec_model_2eproto.base,
+      &scc_info_PredictResponse_OutputsEntry_DoNotUse_predict_2eproto.base,}};
 
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_PredictRequest_InputsEntry_DoNotUse.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_PredictRequest.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_PredictResponse_OutputsEntry_DoNotUse.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_PredictResponse.base);
+void InitDefaults_predict_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_PredictRequest_InputsEntry_DoNotUse_predict_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_PredictRequest_predict_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_PredictResponse_OutputsEntry_DoNotUse_predict_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_PredictResponse_predict_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[4];
+::google::protobuf::Metadata file_level_metadata_predict_2eproto[4];
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_predict_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_predict_2eproto = nullptr;
 
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse, _internal_metadata_),
+const ::google::protobuf::uint32 TableStruct_predict_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse, key_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse, value_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse, value_),
   0,
   1,
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictRequest, model_spec_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictRequest, inputs_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictRequest, output_filter_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictRequest, model_spec_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictRequest, inputs_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictRequest, output_filter_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse, key_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse, value_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse, value_),
   0,
   1,
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictResponse, model_spec_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::PredictResponse, outputs_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictResponse, model_spec_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::PredictResponse, outputs_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, sizeof(::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse)},
   { 9, -1, sizeof(::tensorflow::serving::PredictRequest)},
   { 17, 24, sizeof(::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse)},
@@ -172,78 +160,82 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::tensorflow::serving::_PredictResponse_default_instance_),
 };
 
-static void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "predict.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_predict_2eproto = {
+  {}, AddDescriptors_predict_2eproto, "predict.proto", schemas,
+  file_default_instances, TableStruct_predict_2eproto::offsets,
+  file_level_metadata_predict_2eproto, 4, file_level_enum_descriptors_predict_2eproto, file_level_service_descriptors_predict_2eproto,
+};
 
-static void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_predict_2eproto[] =
+  "\n\rpredict.proto\022\022tensorflow.serving\032\014ten"
+  "sor.proto\032\013model.proto\"\342\001\n\016PredictReques"
+  "t\0221\n\nmodel_spec\030\001 \001(\0132\035.tensorflow.servi"
+  "ng.ModelSpec\022>\n\006inputs\030\002 \003(\0132..tensorflo"
+  "w.serving.PredictRequest.InputsEntry\022\025\n\r"
+  "output_filter\030\003 \003(\t\032F\n\013InputsEntry\022\013\n\003ke"
+  "y\030\001 \001(\t\022&\n\005value\030\002 \001(\0132\027.tensorflow.Tens"
+  "orProto:\0028\001\"\320\001\n\017PredictResponse\0221\n\nmodel"
+  "_spec\030\002 \001(\0132\035.tensorflow.serving.ModelSp"
+  "ec\022A\n\007outputs\030\001 \003(\01320.tensorflow.serving"
+  ".PredictResponse.OutputsEntry\032G\n\014Outputs"
+  "Entry\022\013\n\003key\030\001 \001(\t\022&\n\005value\030\002 \001(\0132\027.tens"
+  "orflow.TensorProto:\0028\001B\003\370\001\001b\006proto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_predict_2eproto = {
+  false, InitDefaults_predict_2eproto, 
+  descriptor_table_protodef_predict_2eproto,
+  "predict.proto", &assign_descriptors_table_predict_2eproto, 515,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 4);
-}
-
-static void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\rpredict.proto\022\022tensorflow.serving\032\014ten"
-      "sor.proto\032\013model.proto\"\342\001\n\016PredictReques"
-      "t\0221\n\nmodel_spec\030\001 \001(\0132\035.tensorflow.servi"
-      "ng.ModelSpec\022>\n\006inputs\030\002 \003(\0132..tensorflo"
-      "w.serving.PredictRequest.InputsEntry\022\025\n\r"
-      "output_filter\030\003 \003(\t\032F\n\013InputsEntry\022\013\n\003ke"
-      "y\030\001 \001(\t\022&\n\005value\030\002 \001(\0132\027.tensorflow.Tens"
-      "orProto:\0028\001\"\320\001\n\017PredictResponse\0221\n\nmodel"
-      "_spec\030\002 \001(\0132\035.tensorflow.serving.ModelSp"
-      "ec\022A\n\007outputs\030\001 \003(\01320.tensorflow.serving"
-      ".PredictResponse.OutputsEntry\032G\n\014Outputs"
-      "Entry\022\013\n\003key\030\001 \001(\t\022&\n\005value\030\002 \001(\0132\027.tens"
-      "orflow.TensorProto:\0028\001B\003\370\001\001b\006proto3"
+void AddDescriptors_predict_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[2] =
+  {
+    ::AddDescriptors_tensor_2eproto,
+    ::AddDescriptors_model_2eproto,
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 515);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "predict.proto", &protobuf_RegisterTypes);
-  ::protobuf_tensor_2eproto::AddDescriptors();
-  ::protobuf_model_2eproto::AddDescriptors();
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_predict_2eproto, deps, 2);
 }
 
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_predict_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_predict_2eproto = []() { AddDescriptors_predict_2eproto(); return true; }();
 namespace tensorflow {
 namespace serving {
 
 // ===================================================================
 
 PredictRequest_InputsEntry_DoNotUse::PredictRequest_InputsEntry_DoNotUse() {}
-PredictRequest_InputsEntry_DoNotUse::PredictRequest_InputsEntry_DoNotUse(::google::protobuf::Arena* arena) : SuperType(arena) {}
+PredictRequest_InputsEntry_DoNotUse::PredictRequest_InputsEntry_DoNotUse(::google::protobuf::Arena* arena)
+    : SuperType(arena) {}
 void PredictRequest_InputsEntry_DoNotUse::MergeFrom(const PredictRequest_InputsEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
 ::google::protobuf::Metadata PredictRequest_InputsEntry_DoNotUse::GetMetadata() const {
-  ::protobuf_predict_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_predict_2eproto::file_level_metadata[0];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_predict_2eproto);
+  return ::file_level_metadata_predict_2eproto[0];
 }
 void PredictRequest_InputsEntry_DoNotUse::MergeFrom(
     const ::google::protobuf::Message& other) {
   ::google::protobuf::Message::MergeFrom(other);
 }
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool PredictRequest_InputsEntry_DoNotUse::_ParseMap(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx) {
+  using MF = ::google::protobuf::internal::MapField<
+      PredictRequest_InputsEntry_DoNotUse, EntryKeyType, EntryValueType,
+      kEntryKeyFieldType, kEntryValueFieldType,
+      kEntryDefaultEnumValue>;
+  auto mf = static_cast<MF*>(object);
+  Parser<MF, ::google::protobuf::Map<EntryKeyType, EntryValueType>> parser(mf);
+#define DO_(x) if (!(x)) return false
+  DO_(parser.ParseMap(begin, end));
+  DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+    parser.key().data(), static_cast<int>(parser.key().length()),
+    ::google::protobuf::internal::WireFormatLite::PARSE,
+    "tensorflow.serving.PredictRequest.InputsEntry.key"));
+#undef DO_
+  return true;
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 
 // ===================================================================
@@ -252,9 +244,18 @@ void PredictRequest::InitAsDefaultInstance() {
   ::tensorflow::serving::_PredictRequest_default_instance_._instance.get_mutable()->model_spec_ = const_cast< ::tensorflow::serving::ModelSpec*>(
       ::tensorflow::serving::ModelSpec::internal_default_instance());
 }
+class PredictRequest::HasBitSetters {
+ public:
+  static const ::tensorflow::serving::ModelSpec& model_spec(const PredictRequest* msg);
+};
+
+const ::tensorflow::serving::ModelSpec&
+PredictRequest::HasBitSetters::model_spec(const PredictRequest* msg) {
+  return *msg->model_spec_;
+}
 void PredictRequest::unsafe_arena_set_allocated_model_spec(
     ::tensorflow::serving::ModelSpec* model_spec) {
-  if (GetArenaNoVirtual() == NULL) {
+  if (GetArenaNoVirtual() == nullptr) {
     delete model_spec_;
   }
   model_spec_ = model_spec;
@@ -266,10 +267,10 @@ void PredictRequest::unsafe_arena_set_allocated_model_spec(
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.serving.PredictRequest.model_spec)
 }
 void PredictRequest::clear_model_spec() {
-  if (GetArenaNoVirtual() == NULL && model_spec_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && model_spec_ != nullptr) {
     delete model_spec_;
   }
-  model_spec_ = NULL;
+  model_spec_ = nullptr;
 }
 void PredictRequest::clear_inputs() {
   inputs_.Clear();
@@ -281,9 +282,7 @@ const int PredictRequest::kOutputFilterFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 PredictRequest::PredictRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_predict_2eproto::scc_info_PredictRequest.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.serving.PredictRequest)
 }
@@ -292,27 +291,28 @@ PredictRequest::PredictRequest(::google::protobuf::Arena* arena)
   _internal_metadata_(arena),
   inputs_(arena),
   output_filter_(arena) {
-  ::google::protobuf::internal::InitSCC(&protobuf_predict_2eproto::scc_info_PredictRequest.base);
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.serving.PredictRequest)
 }
 PredictRequest::PredictRequest(const PredictRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       output_filter_(from.output_filter_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   inputs_.MergeFrom(from.inputs_);
   if (from.has_model_spec()) {
     model_spec_ = new ::tensorflow::serving::ModelSpec(*from.model_spec_);
   } else {
-    model_spec_ = NULL;
+    model_spec_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:tensorflow.serving.PredictRequest)
 }
 
 void PredictRequest::SharedCtor() {
-  model_spec_ = NULL;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_PredictRequest_predict_2eproto.base);
+  model_spec_ = nullptr;
 }
 
 PredictRequest::~PredictRequest() {
@@ -321,7 +321,7 @@ PredictRequest::~PredictRequest() {
 }
 
 void PredictRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaNoVirtual() == NULL);
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   if (this != internal_default_instance()) delete model_spec_;
 }
 
@@ -334,13 +334,8 @@ void PredictRequest::RegisterArenaDtor(::google::protobuf::Arena*) {
 void PredictRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* PredictRequest::descriptor() {
-  ::protobuf_predict_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_predict_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const PredictRequest& PredictRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_predict_2eproto::scc_info_PredictRequest.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_PredictRequest_predict_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -353,16 +348,104 @@ void PredictRequest::Clear() {
 
   inputs_.Clear();
   output_filter_.Clear();
-  if (GetArenaNoVirtual() == NULL && model_spec_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && model_spec_ != nullptr) {
     delete model_spec_;
   }
-  model_spec_ = NULL;
+  model_spec_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* PredictRequest::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<PredictRequest*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .tensorflow.serving.ModelSpec model_spec = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::tensorflow::serving::ModelSpec::_InternalParse;
+        object = msg->mutable_model_spec();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // map<string, .tensorflow.TensorProto> inputs = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::google::protobuf::internal::SlowMapEntryParser;
+          auto parse_map = ::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse::_ParseMap;
+          ctx->extra_parse_data().payload.clear();
+          ctx->extra_parse_data().parse_map = parse_map;
+          object = &msg->inputs_;
+          if (size > end - ptr) goto len_delim_till_end;
+          auto newend = ptr + size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(parse_map(ptr, newend, object, ctx));
+          ptr = newend;
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
+        break;
+      }
+      // repeated string output_filter = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          ctx->extra_parse_data().SetFieldName("tensorflow.serving.PredictRequest.output_filter");
+          object = msg->add_output_filter();
+          if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+            parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+            goto string_till_end;
+          }
+          GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+          ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+          ptr += size;
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 26 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool PredictRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.serving.PredictRequest)
   for (;;) {
@@ -372,8 +455,7 @@ bool PredictRequest::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .tensorflow.serving.ModelSpec model_spec = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_model_spec()));
         } else {
@@ -384,8 +466,7 @@ bool PredictRequest::MergePartialFromCodedStream(
 
       // map<string, .tensorflow.TensorProto> inputs = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           PredictRequest_InputsEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
               PredictRequest_InputsEntry_DoNotUse,
               ::std::string, ::tensorflow::TensorProto,
@@ -407,8 +488,7 @@ bool PredictRequest::MergePartialFromCodedStream(
 
       // repeated string output_filter = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_output_filter()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -441,6 +521,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void PredictRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -451,7 +532,7 @@ void PredictRequest::SerializeWithCachedSizes(
   // .tensorflow.serving.ModelSpec model_spec = 1;
   if (this->has_model_spec()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_model_spec(), output);
+      1, HasBitSetters::model_spec(this), output);
   }
 
   // map<string, .tensorflow.TensorProto> inputs = 2;
@@ -483,28 +564,24 @@ void PredictRequest::SerializeWithCachedSizes(
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       ::std::unique_ptr<PredictRequest_InputsEntry_DoNotUse> entry;
       for (size_type i = 0; i < n; i++) {
-        entry.reset(inputs_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            2, *entry, output);
-        if (entry->GetArena() != NULL) {
+        entry.reset(inputs_.NewEntryWrapper(items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, *entry, output);
+        if (entry->GetArena() != nullptr) {
           entry.release();
         }
-        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       ::std::unique_ptr<PredictRequest_InputsEntry_DoNotUse> entry;
       for (::google::protobuf::Map< ::std::string, ::tensorflow::TensorProto >::const_iterator
           it = this->inputs().begin();
           it != this->inputs().end(); ++it) {
-        entry.reset(inputs_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            2, *entry, output);
-        if (entry->GetArena() != NULL) {
+        entry.reset(inputs_.NewEntryWrapper(it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, *entry, output);
+        if (entry->GetArena() != nullptr) {
           entry.release();
         }
-        Utf8Check::Check(&*it);
+        Utf8Check::Check(&(*it));
       }
     }
   }
@@ -519,16 +596,15 @@ void PredictRequest::SerializeWithCachedSizes(
       3, this->output_filter(i), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:tensorflow.serving.PredictRequest)
 }
 
 ::google::protobuf::uint8* PredictRequest::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.serving.PredictRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -537,7 +613,7 @@ void PredictRequest::SerializeWithCachedSizes(
   if (this->has_model_spec()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->_internal_model_spec(), deterministic, target);
+        1, HasBitSetters::model_spec(this), target);
   }
 
   // map<string, .tensorflow.TensorProto> inputs = 2;
@@ -555,7 +631,7 @@ void PredictRequest::SerializeWithCachedSizes(
       }
     };
 
-    if (deterministic &&
+    if (false &&
         this->inputs().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
           new SortItem[this->inputs().size()]);
@@ -569,32 +645,24 @@ void PredictRequest::SerializeWithCachedSizes(
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       ::std::unique_ptr<PredictRequest_InputsEntry_DoNotUse> entry;
       for (size_type i = 0; i < n; i++) {
-        entry.reset(inputs_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       2, *entry, deterministic, target);
-;
-        if (entry->GetArena() != NULL) {
+        entry.reset(inputs_.NewEntryWrapper(items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(2, *entry, target);
+        if (entry->GetArena() != nullptr) {
           entry.release();
         }
-        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       ::std::unique_ptr<PredictRequest_InputsEntry_DoNotUse> entry;
       for (::google::protobuf::Map< ::std::string, ::tensorflow::TensorProto >::const_iterator
           it = this->inputs().begin();
           it != this->inputs().end(); ++it) {
-        entry.reset(inputs_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       2, *entry, deterministic, target);
-;
-        if (entry->GetArena() != NULL) {
+        entry.reset(inputs_.NewEntryWrapper(it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(2, *entry, target);
+        if (entry->GetArena() != nullptr) {
           entry.release();
         }
-        Utf8Check::Check(&*it);
+        Utf8Check::Check(&(*it));
       }
     }
   }
@@ -609,9 +677,9 @@ void PredictRequest::SerializeWithCachedSizes(
       WriteStringToArray(3, this->output_filter(i), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.serving.PredictRequest)
   return target;
@@ -621,11 +689,15 @@ size_t PredictRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.serving.PredictRequest)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // map<string, .tensorflow.TensorProto> inputs = 2;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->inputs_size());
@@ -634,14 +706,14 @@ size_t PredictRequest::ByteSizeLong() const {
     for (::google::protobuf::Map< ::std::string, ::tensorflow::TensorProto >::const_iterator
         it = this->inputs().begin();
         it != this->inputs().end(); ++it) {
-      if (entry.get() != NULL && entry->GetArena() != NULL) {
+      if (entry.get() != nullptr && entry->GetArena() != nullptr) {
         entry.release();
       }
       entry.reset(inputs_.NewEntryWrapper(it->first, it->second));
       total_size += ::google::protobuf::internal::WireFormatLite::
           MessageSizeNoVirtual(*entry);
     }
-    if (entry.get() != NULL && entry->GetArena() != NULL) {
+    if (entry.get() != nullptr && entry->GetArena() != nullptr) {
       entry.release();
     }
   }
@@ -670,9 +742,9 @@ void PredictRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.serving.PredictRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const PredictRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const PredictRequest>(
+      ::google::protobuf::DynamicCastToGenerated<PredictRequest>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:tensorflow.serving.PredictRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -722,7 +794,7 @@ void PredictRequest::Swap(PredictRequest* other) {
     temp->MergeFrom(*other);
     other->CopyFrom(*this);
     InternalSwap(temp);
-    if (GetArenaNoVirtual() == NULL) {
+    if (GetArenaNoVirtual() == nullptr) {
       delete temp;
     }
   }
@@ -734,33 +806,53 @@ void PredictRequest::UnsafeArenaSwap(PredictRequest* other) {
 }
 void PredictRequest::InternalSwap(PredictRequest* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   inputs_.Swap(&other->inputs_);
   output_filter_.InternalSwap(CastToBase(&other->output_filter_));
   swap(model_spec_, other->model_spec_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata PredictRequest::GetMetadata() const {
-  protobuf_predict_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_predict_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_predict_2eproto);
+  return ::file_level_metadata_predict_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
 PredictResponse_OutputsEntry_DoNotUse::PredictResponse_OutputsEntry_DoNotUse() {}
-PredictResponse_OutputsEntry_DoNotUse::PredictResponse_OutputsEntry_DoNotUse(::google::protobuf::Arena* arena) : SuperType(arena) {}
+PredictResponse_OutputsEntry_DoNotUse::PredictResponse_OutputsEntry_DoNotUse(::google::protobuf::Arena* arena)
+    : SuperType(arena) {}
 void PredictResponse_OutputsEntry_DoNotUse::MergeFrom(const PredictResponse_OutputsEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
 ::google::protobuf::Metadata PredictResponse_OutputsEntry_DoNotUse::GetMetadata() const {
-  ::protobuf_predict_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_predict_2eproto::file_level_metadata[2];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_predict_2eproto);
+  return ::file_level_metadata_predict_2eproto[2];
 }
 void PredictResponse_OutputsEntry_DoNotUse::MergeFrom(
     const ::google::protobuf::Message& other) {
   ::google::protobuf::Message::MergeFrom(other);
 }
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool PredictResponse_OutputsEntry_DoNotUse::_ParseMap(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx) {
+  using MF = ::google::protobuf::internal::MapField<
+      PredictResponse_OutputsEntry_DoNotUse, EntryKeyType, EntryValueType,
+      kEntryKeyFieldType, kEntryValueFieldType,
+      kEntryDefaultEnumValue>;
+  auto mf = static_cast<MF*>(object);
+  Parser<MF, ::google::protobuf::Map<EntryKeyType, EntryValueType>> parser(mf);
+#define DO_(x) if (!(x)) return false
+  DO_(parser.ParseMap(begin, end));
+  DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+    parser.key().data(), static_cast<int>(parser.key().length()),
+    ::google::protobuf::internal::WireFormatLite::PARSE,
+    "tensorflow.serving.PredictResponse.OutputsEntry.key"));
+#undef DO_
+  return true;
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 
 // ===================================================================
@@ -769,9 +861,18 @@ void PredictResponse::InitAsDefaultInstance() {
   ::tensorflow::serving::_PredictResponse_default_instance_._instance.get_mutable()->model_spec_ = const_cast< ::tensorflow::serving::ModelSpec*>(
       ::tensorflow::serving::ModelSpec::internal_default_instance());
 }
+class PredictResponse::HasBitSetters {
+ public:
+  static const ::tensorflow::serving::ModelSpec& model_spec(const PredictResponse* msg);
+};
+
+const ::tensorflow::serving::ModelSpec&
+PredictResponse::HasBitSetters::model_spec(const PredictResponse* msg) {
+  return *msg->model_spec_;
+}
 void PredictResponse::unsafe_arena_set_allocated_model_spec(
     ::tensorflow::serving::ModelSpec* model_spec) {
-  if (GetArenaNoVirtual() == NULL) {
+  if (GetArenaNoVirtual() == nullptr) {
     delete model_spec_;
   }
   model_spec_ = model_spec;
@@ -783,10 +884,10 @@ void PredictResponse::unsafe_arena_set_allocated_model_spec(
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.serving.PredictResponse.model_spec)
 }
 void PredictResponse::clear_model_spec() {
-  if (GetArenaNoVirtual() == NULL && model_spec_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && model_spec_ != nullptr) {
     delete model_spec_;
   }
-  model_spec_ = NULL;
+  model_spec_ = nullptr;
 }
 void PredictResponse::clear_outputs() {
   outputs_.Clear();
@@ -797,9 +898,7 @@ const int PredictResponse::kOutputsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 PredictResponse::PredictResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_predict_2eproto::scc_info_PredictResponse.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.serving.PredictResponse)
 }
@@ -807,26 +906,27 @@ PredictResponse::PredictResponse(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena),
   outputs_(arena) {
-  ::google::protobuf::internal::InitSCC(&protobuf_predict_2eproto::scc_info_PredictResponse.base);
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.serving.PredictResponse)
 }
 PredictResponse::PredictResponse(const PredictResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   outputs_.MergeFrom(from.outputs_);
   if (from.has_model_spec()) {
     model_spec_ = new ::tensorflow::serving::ModelSpec(*from.model_spec_);
   } else {
-    model_spec_ = NULL;
+    model_spec_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:tensorflow.serving.PredictResponse)
 }
 
 void PredictResponse::SharedCtor() {
-  model_spec_ = NULL;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_PredictResponse_predict_2eproto.base);
+  model_spec_ = nullptr;
 }
 
 PredictResponse::~PredictResponse() {
@@ -835,7 +935,7 @@ PredictResponse::~PredictResponse() {
 }
 
 void PredictResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaNoVirtual() == NULL);
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   if (this != internal_default_instance()) delete model_spec_;
 }
 
@@ -848,13 +948,8 @@ void PredictResponse::RegisterArenaDtor(::google::protobuf::Arena*) {
 void PredictResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* PredictResponse::descriptor() {
-  ::protobuf_predict_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_predict_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const PredictResponse& PredictResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_predict_2eproto::scc_info_PredictResponse.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_PredictResponse_predict_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -866,16 +961,81 @@ void PredictResponse::Clear() {
   (void) cached_has_bits;
 
   outputs_.Clear();
-  if (GetArenaNoVirtual() == NULL && model_spec_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && model_spec_ != nullptr) {
     delete model_spec_;
   }
-  model_spec_ = NULL;
+  model_spec_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* PredictResponse::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<PredictResponse*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // map<string, .tensorflow.TensorProto> outputs = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::google::protobuf::internal::SlowMapEntryParser;
+          auto parse_map = ::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse::_ParseMap;
+          ctx->extra_parse_data().payload.clear();
+          ctx->extra_parse_data().parse_map = parse_map;
+          object = &msg->outputs_;
+          if (size > end - ptr) goto len_delim_till_end;
+          auto newend = ptr + size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(parse_map(ptr, newend, object, ctx));
+          ptr = newend;
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      // .tensorflow.serving.ModelSpec model_spec = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::tensorflow::serving::ModelSpec::_InternalParse;
+        object = msg->mutable_model_spec();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool PredictResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.serving.PredictResponse)
   for (;;) {
@@ -885,8 +1045,7 @@ bool PredictResponse::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // map<string, .tensorflow.TensorProto> outputs = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           PredictResponse_OutputsEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
               PredictResponse_OutputsEntry_DoNotUse,
               ::std::string, ::tensorflow::TensorProto,
@@ -908,8 +1067,7 @@ bool PredictResponse::MergePartialFromCodedStream(
 
       // .tensorflow.serving.ModelSpec model_spec = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_model_spec()));
         } else {
@@ -937,6 +1095,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void PredictResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -973,28 +1132,24 @@ void PredictResponse::SerializeWithCachedSizes(
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       ::std::unique_ptr<PredictResponse_OutputsEntry_DoNotUse> entry;
       for (size_type i = 0; i < n; i++) {
-        entry.reset(outputs_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            1, *entry, output);
-        if (entry->GetArena() != NULL) {
+        entry.reset(outputs_.NewEntryWrapper(items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(1, *entry, output);
+        if (entry->GetArena() != nullptr) {
           entry.release();
         }
-        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       ::std::unique_ptr<PredictResponse_OutputsEntry_DoNotUse> entry;
       for (::google::protobuf::Map< ::std::string, ::tensorflow::TensorProto >::const_iterator
           it = this->outputs().begin();
           it != this->outputs().end(); ++it) {
-        entry.reset(outputs_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            1, *entry, output);
-        if (entry->GetArena() != NULL) {
+        entry.reset(outputs_.NewEntryWrapper(it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(1, *entry, output);
+        if (entry->GetArena() != nullptr) {
           entry.release();
         }
-        Utf8Check::Check(&*it);
+        Utf8Check::Check(&(*it));
       }
     }
   }
@@ -1002,19 +1157,18 @@ void PredictResponse::SerializeWithCachedSizes(
   // .tensorflow.serving.ModelSpec model_spec = 2;
   if (this->has_model_spec()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_model_spec(), output);
+      2, HasBitSetters::model_spec(this), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:tensorflow.serving.PredictResponse)
 }
 
 ::google::protobuf::uint8* PredictResponse::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.serving.PredictResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1034,7 +1188,7 @@ void PredictResponse::SerializeWithCachedSizes(
       }
     };
 
-    if (deterministic &&
+    if (false &&
         this->outputs().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
           new SortItem[this->outputs().size()]);
@@ -1048,32 +1202,24 @@ void PredictResponse::SerializeWithCachedSizes(
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       ::std::unique_ptr<PredictResponse_OutputsEntry_DoNotUse> entry;
       for (size_type i = 0; i < n; i++) {
-        entry.reset(outputs_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       1, *entry, deterministic, target);
-;
-        if (entry->GetArena() != NULL) {
+        entry.reset(outputs_.NewEntryWrapper(items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(1, *entry, target);
+        if (entry->GetArena() != nullptr) {
           entry.release();
         }
-        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       ::std::unique_ptr<PredictResponse_OutputsEntry_DoNotUse> entry;
       for (::google::protobuf::Map< ::std::string, ::tensorflow::TensorProto >::const_iterator
           it = this->outputs().begin();
           it != this->outputs().end(); ++it) {
-        entry.reset(outputs_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       1, *entry, deterministic, target);
-;
-        if (entry->GetArena() != NULL) {
+        entry.reset(outputs_.NewEntryWrapper(it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(1, *entry, target);
+        if (entry->GetArena() != nullptr) {
           entry.release();
         }
-        Utf8Check::Check(&*it);
+        Utf8Check::Check(&(*it));
       }
     }
   }
@@ -1082,12 +1228,12 @@ void PredictResponse::SerializeWithCachedSizes(
   if (this->has_model_spec()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->_internal_model_spec(), deterministic, target);
+        2, HasBitSetters::model_spec(this), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.serving.PredictResponse)
   return target;
@@ -1097,11 +1243,15 @@ size_t PredictResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.serving.PredictResponse)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // map<string, .tensorflow.TensorProto> outputs = 1;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->outputs_size());
@@ -1110,14 +1260,14 @@ size_t PredictResponse::ByteSizeLong() const {
     for (::google::protobuf::Map< ::std::string, ::tensorflow::TensorProto >::const_iterator
         it = this->outputs().begin();
         it != this->outputs().end(); ++it) {
-      if (entry.get() != NULL && entry->GetArena() != NULL) {
+      if (entry.get() != nullptr && entry->GetArena() != nullptr) {
         entry.release();
       }
       entry.reset(outputs_.NewEntryWrapper(it->first, it->second));
       total_size += ::google::protobuf::internal::WireFormatLite::
           MessageSizeNoVirtual(*entry);
     }
-    if (entry.get() != NULL && entry->GetArena() != NULL) {
+    if (entry.get() != nullptr && entry->GetArena() != nullptr) {
       entry.release();
     }
   }
@@ -1138,9 +1288,9 @@ void PredictResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.serving.PredictResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const PredictResponse* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const PredictResponse>(
+      ::google::protobuf::DynamicCastToGenerated<PredictResponse>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:tensorflow.serving.PredictResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1189,7 +1339,7 @@ void PredictResponse::Swap(PredictResponse* other) {
     temp->MergeFrom(*other);
     other->CopyFrom(*this);
     InternalSwap(temp);
-    if (GetArenaNoVirtual() == NULL) {
+    if (GetArenaNoVirtual() == nullptr) {
       delete temp;
     }
   }
@@ -1201,14 +1351,14 @@ void PredictResponse::UnsafeArenaSwap(PredictResponse* other) {
 }
 void PredictResponse::InternalSwap(PredictResponse* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   outputs_.Swap(&other->outputs_);
   swap(model_spec_, other->model_spec_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata PredictResponse::GetMetadata() const {
-  protobuf_predict_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_predict_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_predict_2eproto);
+  return ::file_level_metadata_predict_2eproto[kIndexInFileMessages];
 }
 
 
@@ -1217,19 +1367,20 @@ void PredictResponse::InternalSwap(PredictResponse* other) {
 }  // namespace tensorflow
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse* Arena::CreateMaybeMessage< ::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse* Arena::CreateMaybeMessage< ::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::tensorflow::serving::PredictRequest_InputsEntry_DoNotUse >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::tensorflow::serving::PredictRequest* Arena::CreateMaybeMessage< ::tensorflow::serving::PredictRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::tensorflow::serving::PredictRequest* Arena::CreateMaybeMessage< ::tensorflow::serving::PredictRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::tensorflow::serving::PredictRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse* Arena::CreateMaybeMessage< ::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse* Arena::CreateMaybeMessage< ::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::tensorflow::serving::PredictResponse_OutputsEntry_DoNotUse >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::tensorflow::serving::PredictResponse* Arena::CreateMaybeMessage< ::tensorflow::serving::PredictResponse >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::tensorflow::serving::PredictResponse* Arena::CreateMaybeMessage< ::tensorflow::serving::PredictResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::tensorflow::serving::PredictResponse >(arena);
 }
 }  // namespace protobuf
 }  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

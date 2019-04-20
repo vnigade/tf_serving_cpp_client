@@ -6,38 +6,30 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_model_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_model_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Int64Value;
-}  // namespace protobuf_model_2eproto
+extern PROTOBUF_INTERNAL_EXPORT_model_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Int64Value_model_2eproto;
 namespace tensorflow {
 namespace serving {
 class Int64ValueDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Int64Value>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<Int64Value> _instance;
 } _Int64Value_default_instance_;
 class ModelSpecDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ModelSpec>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<ModelSpec> _instance;
 } _ModelSpec_default_instance_;
 }  // namespace serving
 }  // namespace tensorflow
-namespace protobuf_model_2eproto {
-static void InitDefaultsInt64Value() {
+static void InitDefaultsInt64Value_model_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -48,10 +40,10 @@ static void InitDefaultsInt64Value() {
   ::tensorflow::serving::Int64Value::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_Int64Value =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsInt64Value}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_Int64Value_model_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsInt64Value_model_2eproto}, {}};
 
-static void InitDefaultsModelSpec() {
+static void InitDefaultsModelSpec_model_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -62,34 +54,36 @@ static void InitDefaultsModelSpec() {
   ::tensorflow::serving::ModelSpec::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_ModelSpec =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsModelSpec}, {
-      &protobuf_model_2eproto::scc_info_Int64Value.base,}};
+::google::protobuf::internal::SCCInfo<1> scc_info_ModelSpec_model_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsModelSpec_model_2eproto}, {
+      &scc_info_Int64Value_model_2eproto.base,}};
 
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_Int64Value.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_ModelSpec.base);
+void InitDefaults_model_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_Int64Value_model_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ModelSpec_model_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[2];
+::google::protobuf::Metadata file_level_metadata_model_2eproto[2];
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_model_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_model_2eproto = nullptr;
 
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const ::google::protobuf::uint32 TableStruct_model_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::Int64Value, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::Int64Value, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::Int64Value, value_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::Int64Value, value_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::ModelSpec, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::ModelSpec, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::ModelSpec, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::ModelSpec, version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::tensorflow::serving::ModelSpec, signature_name_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::ModelSpec, name_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::ModelSpec, version_),
+  PROTOBUF_FIELD_OFFSET(::tensorflow::serving::ModelSpec, signature_name_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::tensorflow::serving::Int64Value)},
   { 6, -1, sizeof(::tensorflow::serving::ModelSpec)},
 };
@@ -99,50 +93,34 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::tensorflow::serving::_ModelSpec_default_instance_),
 };
 
-static void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "model.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_model_2eproto = {
+  {}, AddDescriptors_model_2eproto, "model.proto", schemas,
+  file_default_instances, TableStruct_model_2eproto::offsets,
+  file_level_metadata_model_2eproto, 2, file_level_enum_descriptors_model_2eproto, file_level_service_descriptors_model_2eproto,
+};
 
-static void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_model_2eproto[] =
+  "\n\013model.proto\022\022tensorflow.serving\"\033\n\nInt"
+  "64Value\022\r\n\005value\030\001 \001(\003\"b\n\tModelSpec\022\014\n\004n"
+  "ame\030\001 \001(\t\022/\n\007version\030\002 \001(\0132\036.tensorflow."
+  "serving.Int64Value\022\026\n\016signature_name\030\003 \001"
+  "(\tB\003\370\001\001b\006proto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_model_2eproto = {
+  false, InitDefaults_model_2eproto, 
+  descriptor_table_protodef_model_2eproto,
+  "model.proto", &assign_descriptors_table_model_2eproto, 175,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
-}
-
-static void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\013model.proto\022\022tensorflow.serving\"\033\n\nInt"
-      "64Value\022\r\n\005value\030\001 \001(\003\"b\n\tModelSpec\022\014\n\004n"
-      "ame\030\001 \001(\t\022/\n\007version\030\002 \001(\0132\036.tensorflow."
-      "serving.Int64Value\022\026\n\016signature_name\030\003 \001"
-      "(\tB\003\370\001\001b\006proto3"
+void AddDescriptors_model_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
+  {
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 175);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "model.proto", &protobuf_RegisterTypes);
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_model_2eproto, deps, 0);
 }
 
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_model_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_model_2eproto = []() { AddDescriptors_model_2eproto(); return true; }();
 namespace tensorflow {
 namespace serving {
 
@@ -150,35 +128,36 @@ namespace serving {
 
 void Int64Value::InitAsDefaultInstance() {
 }
+class Int64Value::HasBitSetters {
+ public:
+};
+
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Int64Value::kValueFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Int64Value::Int64Value()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_model_2eproto::scc_info_Int64Value.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.serving.Int64Value)
 }
 Int64Value::Int64Value(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-  ::google::protobuf::internal::InitSCC(&protobuf_model_2eproto::scc_info_Int64Value.base);
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.serving.Int64Value)
 }
 Int64Value::Int64Value(const Int64Value& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   value_ = from.value_;
   // @@protoc_insertion_point(copy_constructor:tensorflow.serving.Int64Value)
 }
 
 void Int64Value::SharedCtor() {
-  value_ = GOOGLE_LONGLONG(0);
+  value_ = PROTOBUF_LONGLONG(0);
 }
 
 Int64Value::~Int64Value() {
@@ -187,7 +166,7 @@ Int64Value::~Int64Value() {
 }
 
 void Int64Value::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaNoVirtual() == NULL);
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
 }
 
 void Int64Value::ArenaDtor(void* object) {
@@ -199,13 +178,8 @@ void Int64Value::RegisterArenaDtor(::google::protobuf::Arena*) {
 void Int64Value::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Int64Value::descriptor() {
-  ::protobuf_model_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_model_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Int64Value& Int64Value::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_model_2eproto::scc_info_Int64Value.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_Int64Value_model_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -216,13 +190,50 @@ void Int64Value::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  value_ = GOOGLE_LONGLONG(0);
+  value_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Int64Value::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<Int64Value*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int64 value = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_value(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool Int64Value::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.serving.Int64Value)
   for (;;) {
@@ -232,8 +243,7 @@ bool Int64Value::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // int64 value = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -263,6 +273,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void Int64Value::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -275,16 +286,15 @@ void Int64Value::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->value(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:tensorflow.serving.Int64Value)
 }
 
 ::google::protobuf::uint8* Int64Value::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.serving.Int64Value)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -294,9 +304,9 @@ void Int64Value::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->value(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.serving.Int64Value)
   return target;
@@ -306,11 +316,15 @@ size_t Int64Value::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.serving.Int64Value)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // int64 value = 1;
   if (this->value() != 0) {
     total_size += 1 +
@@ -327,9 +341,9 @@ void Int64Value::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.serving.Int64Value)
   GOOGLE_DCHECK_NE(&from, this);
   const Int64Value* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Int64Value>(
+      ::google::protobuf::DynamicCastToGenerated<Int64Value>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:tensorflow.serving.Int64Value)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -377,7 +391,7 @@ void Int64Value::Swap(Int64Value* other) {
     temp->MergeFrom(*other);
     other->CopyFrom(*this);
     InternalSwap(temp);
-    if (GetArenaNoVirtual() == NULL) {
+    if (GetArenaNoVirtual() == nullptr) {
       delete temp;
     }
   }
@@ -389,13 +403,13 @@ void Int64Value::UnsafeArenaSwap(Int64Value* other) {
 }
 void Int64Value::InternalSwap(Int64Value* other) {
   using std::swap;
-  swap(value_, other->value_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(value_, other->value_);
 }
 
 ::google::protobuf::Metadata Int64Value::GetMetadata() const {
-  protobuf_model_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_model_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_model_2eproto);
+  return ::file_level_metadata_model_2eproto[kIndexInFileMessages];
 }
 
 
@@ -405,9 +419,18 @@ void ModelSpec::InitAsDefaultInstance() {
   ::tensorflow::serving::_ModelSpec_default_instance_._instance.get_mutable()->version_ = const_cast< ::tensorflow::serving::Int64Value*>(
       ::tensorflow::serving::Int64Value::internal_default_instance());
 }
+class ModelSpec::HasBitSetters {
+ public:
+  static const ::tensorflow::serving::Int64Value& version(const ModelSpec* msg);
+};
+
+const ::tensorflow::serving::Int64Value&
+ModelSpec::HasBitSetters::version(const ModelSpec* msg) {
+  return *msg->version_;
+}
 void ModelSpec::unsafe_arena_set_allocated_version(
     ::tensorflow::serving::Int64Value* version) {
-  if (GetArenaNoVirtual() == NULL) {
+  if (GetArenaNoVirtual() == nullptr) {
     delete version_;
   }
   version_ = version;
@@ -425,23 +448,20 @@ const int ModelSpec::kSignatureNameFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ModelSpec::ModelSpec()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_model_2eproto::scc_info_ModelSpec.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.serving.ModelSpec)
 }
 ModelSpec::ModelSpec(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-  ::google::protobuf::internal::InitSCC(&protobuf_model_2eproto::scc_info_ModelSpec.base);
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.serving.ModelSpec)
 }
 ModelSpec::ModelSpec(const ModelSpec& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -456,15 +476,17 @@ ModelSpec::ModelSpec(const ModelSpec& from)
   if (from.has_version()) {
     version_ = new ::tensorflow::serving::Int64Value(*from.version_);
   } else {
-    version_ = NULL;
+    version_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:tensorflow.serving.ModelSpec)
 }
 
 void ModelSpec::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ModelSpec_model_2eproto.base);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   signature_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_ = NULL;
+  version_ = nullptr;
 }
 
 ModelSpec::~ModelSpec() {
@@ -473,7 +495,7 @@ ModelSpec::~ModelSpec() {
 }
 
 void ModelSpec::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaNoVirtual() == NULL);
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   signature_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete version_;
@@ -488,13 +510,8 @@ void ModelSpec::RegisterArenaDtor(::google::protobuf::Arena*) {
 void ModelSpec::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* ModelSpec::descriptor() {
-  ::protobuf_model_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_model_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const ModelSpec& ModelSpec::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_model_2eproto::scc_info_ModelSpec.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_ModelSpec_model_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -507,16 +524,98 @@ void ModelSpec::Clear() {
 
   name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   signature_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (GetArenaNoVirtual() == NULL && version_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && version_ != nullptr) {
     delete version_;
   }
-  version_ = NULL;
+  version_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ModelSpec::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ModelSpec*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string name = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("tensorflow.serving.ModelSpec.name");
+        object = msg->mutable_name();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // .tensorflow.serving.Int64Value version = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::tensorflow::serving::Int64Value::_InternalParse;
+        object = msg->mutable_version();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // string signature_name = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("tensorflow.serving.ModelSpec.signature_name");
+        object = msg->mutable_signature_name();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool ModelSpec::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.serving.ModelSpec)
   for (;;) {
@@ -526,8 +625,7 @@ bool ModelSpec::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string name = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -542,8 +640,7 @@ bool ModelSpec::MergePartialFromCodedStream(
 
       // .tensorflow.serving.Int64Value version = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_version()));
         } else {
@@ -554,8 +651,7 @@ bool ModelSpec::MergePartialFromCodedStream(
 
       // string signature_name = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_signature_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -587,6 +683,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void ModelSpec::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -607,7 +704,7 @@ void ModelSpec::SerializeWithCachedSizes(
   // .tensorflow.serving.Int64Value version = 2;
   if (this->has_version()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_version(), output);
+      2, HasBitSetters::version(this), output);
   }
 
   // string signature_name = 3;
@@ -620,16 +717,15 @@ void ModelSpec::SerializeWithCachedSizes(
       3, this->signature_name(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:tensorflow.serving.ModelSpec)
 }
 
 ::google::protobuf::uint8* ModelSpec::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.serving.ModelSpec)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -649,7 +745,7 @@ void ModelSpec::SerializeWithCachedSizes(
   if (this->has_version()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->_internal_version(), deterministic, target);
+        2, HasBitSetters::version(this), target);
   }
 
   // string signature_name = 3;
@@ -663,9 +759,9 @@ void ModelSpec::SerializeWithCachedSizes(
         3, this->signature_name(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.serving.ModelSpec)
   return target;
@@ -675,11 +771,15 @@ size_t ModelSpec::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.serving.ModelSpec)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
@@ -710,9 +810,9 @@ void ModelSpec::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.serving.ModelSpec)
   GOOGLE_DCHECK_NE(&from, this);
   const ModelSpec* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ModelSpec>(
+      ::google::protobuf::DynamicCastToGenerated<ModelSpec>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:tensorflow.serving.ModelSpec)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -766,7 +866,7 @@ void ModelSpec::Swap(ModelSpec* other) {
     temp->MergeFrom(*other);
     other->CopyFrom(*this);
     InternalSwap(temp);
-    if (GetArenaNoVirtual() == NULL) {
+    if (GetArenaNoVirtual() == nullptr) {
       delete temp;
     }
   }
@@ -778,17 +878,17 @@ void ModelSpec::UnsafeArenaSwap(ModelSpec* other) {
 }
 void ModelSpec::InternalSwap(ModelSpec* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   signature_name_.Swap(&other->signature_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(version_, other->version_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata ModelSpec::GetMetadata() const {
-  protobuf_model_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_model_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_model_2eproto);
+  return ::file_level_metadata_model_2eproto[kIndexInFileMessages];
 }
 
 
@@ -797,13 +897,14 @@ void ModelSpec::InternalSwap(ModelSpec* other) {
 }  // namespace tensorflow
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::tensorflow::serving::Int64Value* Arena::CreateMaybeMessage< ::tensorflow::serving::Int64Value >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::tensorflow::serving::Int64Value* Arena::CreateMaybeMessage< ::tensorflow::serving::Int64Value >(Arena* arena) {
   return Arena::CreateMessageInternal< ::tensorflow::serving::Int64Value >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::tensorflow::serving::ModelSpec* Arena::CreateMaybeMessage< ::tensorflow::serving::ModelSpec >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::tensorflow::serving::ModelSpec* Arena::CreateMaybeMessage< ::tensorflow::serving::ModelSpec >(Arena* arena) {
   return Arena::CreateMessageInternal< ::tensorflow::serving::ModelSpec >(arena);
 }
 }  // namespace protobuf
 }  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

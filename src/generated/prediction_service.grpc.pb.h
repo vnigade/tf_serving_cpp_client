@@ -6,12 +6,15 @@
 
 #include "prediction_service.pb.h"
 
+#include <functional>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/method_handler_impl.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
+#include <grpcpp/impl/codegen/server_callback.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
@@ -46,6 +49,14 @@ class PredictionService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::tensorflow::serving::PredictResponse>> PrepareAsyncPredict(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::tensorflow::serving::PredictResponse>>(PrepareAsyncPredictRaw(context, request, cq));
     }
+    class experimental_async_interface {
+     public:
+      virtual ~experimental_async_interface() {}
+      // Predict -- provides access to loaded TensorFlow model.
+      virtual void Predict(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest* request, ::tensorflow::serving::PredictResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Predict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::tensorflow::serving::PredictResponse* response, std::function<void(::grpc::Status)>) = 0;
+    };
+    virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::tensorflow::serving::PredictResponse>* AsyncPredictRaw(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::tensorflow::serving::PredictResponse>* PrepareAsyncPredictRaw(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -60,9 +71,22 @@ class PredictionService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::tensorflow::serving::PredictResponse>> PrepareAsyncPredict(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::tensorflow::serving::PredictResponse>>(PrepareAsyncPredictRaw(context, request, cq));
     }
+    class experimental_async final :
+      public StubInterface::experimental_async_interface {
+     public:
+      void Predict(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest* request, ::tensorflow::serving::PredictResponse* response, std::function<void(::grpc::Status)>) override;
+      void Predict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::tensorflow::serving::PredictResponse* response, std::function<void(::grpc::Status)>) override;
+     private:
+      friend class Stub;
+      explicit experimental_async(Stub* stub): stub_(stub) { }
+      Stub* stub() { return stub_; }
+      Stub* stub_;
+    };
+    class experimental_async_interface* experimental_async() override { return &async_stub_; }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
+    class experimental_async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::tensorflow::serving::PredictResponse>* AsyncPredictRaw(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::tensorflow::serving::PredictResponse>* PrepareAsyncPredictRaw(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_Predict_;
@@ -97,6 +121,32 @@ class PredictionService final {
     }
   };
   typedef WithAsyncMethod_Predict<Service > AsyncService;
+  template <class BaseClass>
+  class ExperimentalWithCallbackMethod_Predict : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    ExperimentalWithCallbackMethod_Predict() {
+      ::grpc::Service::experimental().MarkMethodCallback(0,
+        new ::grpc::internal::CallbackUnaryHandler< ::tensorflow::serving::PredictRequest, ::tensorflow::serving::PredictResponse>(
+          [this](::grpc::ServerContext* context,
+                 const ::tensorflow::serving::PredictRequest* request,
+                 ::tensorflow::serving::PredictResponse* response,
+                 ::grpc::experimental::ServerCallbackRpcController* controller) {
+                   return this->Predict(context, request, response, controller);
+                 }));
+    }
+    ~ExperimentalWithCallbackMethod_Predict() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Predict(::grpc::ServerContext* context, const ::tensorflow::serving::PredictRequest* request, ::tensorflow::serving::PredictResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual void Predict(::grpc::ServerContext* context, const ::tensorflow::serving::PredictRequest* request, ::tensorflow::serving::PredictResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+  };
+  typedef ExperimentalWithCallbackMethod_Predict<Service > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_Predict : public BaseClass {
    private:
@@ -133,6 +183,31 @@ class PredictionService final {
     void RequestPredict(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
+  };
+  template <class BaseClass>
+  class ExperimentalWithRawCallbackMethod_Predict : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    ExperimentalWithRawCallbackMethod_Predict() {
+      ::grpc::Service::experimental().MarkMethodRawCallback(0,
+        new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          [this](::grpc::ServerContext* context,
+                 const ::grpc::ByteBuffer* request,
+                 ::grpc::ByteBuffer* response,
+                 ::grpc::experimental::ServerCallbackRpcController* controller) {
+                   this->Predict(context, request, response, controller);
+                 }));
+    }
+    ~ExperimentalWithRawCallbackMethod_Predict() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Predict(::grpc::ServerContext* context, const ::tensorflow::serving::PredictRequest* request, ::tensorflow::serving::PredictResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual void Predict(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Predict : public BaseClass {

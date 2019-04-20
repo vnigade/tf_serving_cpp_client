@@ -6,96 +6,79 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
 namespace tensorflow {
 }  // namespace tensorflow
-namespace protobuf_types_2eproto {
-void InitDefaults() {
+void InitDefaults_types_2eproto() {
 }
 
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
-const ::google::protobuf::uint32 TableStruct::offsets[1] = {};
-static const ::google::protobuf::internal::MigrationSchema* schemas = NULL;
-static const ::google::protobuf::Message* const* file_default_instances = NULL;
+constexpr ::google::protobuf::Metadata* file_level_metadata_types_2eproto = nullptr;
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_types_2eproto[1];
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_types_2eproto = nullptr;
+const ::google::protobuf::uint32 TableStruct_types_2eproto::offsets[1] = {};
+static constexpr ::google::protobuf::internal::MigrationSchema* schemas = nullptr;
+static constexpr ::google::protobuf::Message* const* file_default_instances = nullptr;
 
-static void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "types.proto", schemas, file_default_instances, TableStruct::offsets,
-      NULL, file_level_enum_descriptors, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_types_2eproto = {
+  {}, AddDescriptors_types_2eproto, "types.proto", schemas,
+  file_default_instances, TableStruct_types_2eproto::offsets,
+  file_level_metadata_types_2eproto, 0, file_level_enum_descriptors_types_2eproto, file_level_service_descriptors_types_2eproto,
+};
 
-static void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_types_2eproto[] =
+  "\n\013types.proto\022\ntensorflow*\252\006\n\010DataType\022\016"
+  "\n\nDT_INVALID\020\000\022\014\n\010DT_FLOAT\020\001\022\r\n\tDT_DOUBL"
+  "E\020\002\022\014\n\010DT_INT32\020\003\022\014\n\010DT_UINT8\020\004\022\014\n\010DT_IN"
+  "T16\020\005\022\013\n\007DT_INT8\020\006\022\r\n\tDT_STRING\020\007\022\020\n\014DT_"
+  "COMPLEX64\020\010\022\014\n\010DT_INT64\020\t\022\013\n\007DT_BOOL\020\n\022\014"
+  "\n\010DT_QINT8\020\013\022\r\n\tDT_QUINT8\020\014\022\r\n\tDT_QINT32"
+  "\020\r\022\017\n\013DT_BFLOAT16\020\016\022\r\n\tDT_QINT16\020\017\022\016\n\nDT"
+  "_QUINT16\020\020\022\r\n\tDT_UINT16\020\021\022\021\n\rDT_COMPLEX1"
+  "28\020\022\022\013\n\007DT_HALF\020\023\022\017\n\013DT_RESOURCE\020\024\022\016\n\nDT"
+  "_VARIANT\020\025\022\r\n\tDT_UINT32\020\026\022\r\n\tDT_UINT64\020\027"
+  "\022\020\n\014DT_FLOAT_REF\020e\022\021\n\rDT_DOUBLE_REF\020f\022\020\n"
+  "\014DT_INT32_REF\020g\022\020\n\014DT_UINT8_REF\020h\022\020\n\014DT_"
+  "INT16_REF\020i\022\017\n\013DT_INT8_REF\020j\022\021\n\rDT_STRIN"
+  "G_REF\020k\022\024\n\020DT_COMPLEX64_REF\020l\022\020\n\014DT_INT6"
+  "4_REF\020m\022\017\n\013DT_BOOL_REF\020n\022\020\n\014DT_QINT8_REF"
+  "\020o\022\021\n\rDT_QUINT8_REF\020p\022\021\n\rDT_QINT32_REF\020q"
+  "\022\023\n\017DT_BFLOAT16_REF\020r\022\021\n\rDT_QINT16_REF\020s"
+  "\022\022\n\016DT_QUINT16_REF\020t\022\021\n\rDT_UINT16_REF\020u\022"
+  "\025\n\021DT_COMPLEX128_REF\020v\022\017\n\013DT_HALF_REF\020w\022"
+  "\023\n\017DT_RESOURCE_REF\020x\022\022\n\016DT_VARIANT_REF\020y"
+  "\022\021\n\rDT_UINT32_REF\020z\022\021\n\rDT_UINT64_REF\020{Bk"
+  "\n\030org.tensorflow.frameworkB\013TypesProtosP"
+  "\001Z=github.com/tensorflow/tensorflow/tens"
+  "orflow/go/core/framework\370\001\001b\006proto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_types_2eproto = {
+  false, InitDefaults_types_2eproto, 
+  descriptor_table_protodef_types_2eproto,
+  "types.proto", &assign_descriptors_table_types_2eproto, 955,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-}
-
-static void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\013types.proto\022\ntensorflow*\252\006\n\010DataType\022\016"
-      "\n\nDT_INVALID\020\000\022\014\n\010DT_FLOAT\020\001\022\r\n\tDT_DOUBL"
-      "E\020\002\022\014\n\010DT_INT32\020\003\022\014\n\010DT_UINT8\020\004\022\014\n\010DT_IN"
-      "T16\020\005\022\013\n\007DT_INT8\020\006\022\r\n\tDT_STRING\020\007\022\020\n\014DT_"
-      "COMPLEX64\020\010\022\014\n\010DT_INT64\020\t\022\013\n\007DT_BOOL\020\n\022\014"
-      "\n\010DT_QINT8\020\013\022\r\n\tDT_QUINT8\020\014\022\r\n\tDT_QINT32"
-      "\020\r\022\017\n\013DT_BFLOAT16\020\016\022\r\n\tDT_QINT16\020\017\022\016\n\nDT"
-      "_QUINT16\020\020\022\r\n\tDT_UINT16\020\021\022\021\n\rDT_COMPLEX1"
-      "28\020\022\022\013\n\007DT_HALF\020\023\022\017\n\013DT_RESOURCE\020\024\022\016\n\nDT"
-      "_VARIANT\020\025\022\r\n\tDT_UINT32\020\026\022\r\n\tDT_UINT64\020\027"
-      "\022\020\n\014DT_FLOAT_REF\020e\022\021\n\rDT_DOUBLE_REF\020f\022\020\n"
-      "\014DT_INT32_REF\020g\022\020\n\014DT_UINT8_REF\020h\022\020\n\014DT_"
-      "INT16_REF\020i\022\017\n\013DT_INT8_REF\020j\022\021\n\rDT_STRIN"
-      "G_REF\020k\022\024\n\020DT_COMPLEX64_REF\020l\022\020\n\014DT_INT6"
-      "4_REF\020m\022\017\n\013DT_BOOL_REF\020n\022\020\n\014DT_QINT8_REF"
-      "\020o\022\021\n\rDT_QUINT8_REF\020p\022\021\n\rDT_QINT32_REF\020q"
-      "\022\023\n\017DT_BFLOAT16_REF\020r\022\021\n\rDT_QINT16_REF\020s"
-      "\022\022\n\016DT_QUINT16_REF\020t\022\021\n\rDT_UINT16_REF\020u\022"
-      "\025\n\021DT_COMPLEX128_REF\020v\022\017\n\013DT_HALF_REF\020w\022"
-      "\023\n\017DT_RESOURCE_REF\020x\022\022\n\016DT_VARIANT_REF\020y"
-      "\022\021\n\rDT_UINT32_REF\020z\022\021\n\rDT_UINT64_REF\020{Bk"
-      "\n\030org.tensorflow.frameworkB\013TypesProtosP"
-      "\001Z=github.com/tensorflow/tensorflow/tens"
-      "orflow/go/core/framework\370\001\001b\006proto3"
+void AddDescriptors_types_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
+  {
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 955);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "types.proto", &protobuf_RegisterTypes);
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_types_2eproto, deps, 0);
 }
 
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_types_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_types_2eproto = []() { AddDescriptors_types_2eproto(); return true; }();
 namespace tensorflow {
 const ::google::protobuf::EnumDescriptor* DataType_descriptor() {
-  protobuf_types_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_types_2eproto::file_level_enum_descriptors[0];
+  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_types_2eproto);
+  return file_level_enum_descriptors_types_2eproto[0];
 }
 bool DataType_IsValid(int value) {
   switch (value) {
@@ -161,3 +144,4 @@ namespace protobuf {
 }  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

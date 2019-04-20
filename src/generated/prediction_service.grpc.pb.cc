@@ -5,12 +5,15 @@
 #include "prediction_service.pb.h"
 #include "prediction_service.grpc.pb.h"
 
+#include <functional>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/channel_interface.h>
 #include <grpcpp/impl/codegen/client_unary_call.h>
+#include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/method_handler_impl.h>
 #include <grpcpp/impl/codegen/rpc_service_method.h>
+#include <grpcpp/impl/codegen/server_callback.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
 namespace tensorflow {
@@ -32,6 +35,14 @@ PredictionService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& 
 
 ::grpc::Status PredictionService::Stub::Predict(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest& request, ::tensorflow::serving::PredictResponse* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Predict_, context, request, response);
+}
+
+void PredictionService::Stub::experimental_async::Predict(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest* request, ::tensorflow::serving::PredictResponse* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Predict_, context, request, response, std::move(f));
+}
+
+void PredictionService::Stub::experimental_async::Predict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::tensorflow::serving::PredictResponse* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Predict_, context, request, response, std::move(f));
 }
 
 ::grpc::ClientAsyncResponseReader< ::tensorflow::serving::PredictResponse>* PredictionService::Stub::AsyncPredictRaw(::grpc::ClientContext* context, const ::tensorflow::serving::PredictRequest& request, ::grpc::CompletionQueue* cq) {
