@@ -24,7 +24,7 @@ Modifications copyright (C) 2018 Vitaly Bezgachev, vitaly.bezgachev@gmail.com
 #include "generated/prediction_service.grpc.pb.h"
 #include "generated/tensor.grpc.pb.h"
 #include "grpcpp/create_channel.h"
-#include "grpcpp/security/credentials.h"
+
 #include <opencv2/opencv.hpp>
 
 using grpc::Channel;
@@ -56,25 +56,35 @@ const cv::Size resize(int width, int height) {
   height -= height % 2;
   return cv::Size(width, height);
 }
+
 std::vector<cv::Mat> readFrames(std::string video_path, int frame_count) {
   std::vector<cv::Mat> frames(frame_count);
 
   for (int i = 0; i < frame_count; ++i) {
     std::stringstream filepath;
     filepath << video_path << "/frame" << i << ".jpg";
-    cv::Mat sample = cv::imread(filepath.str(), cv::IMREAD_COLOR);
-    // cv::cvtColor(sample, sample, CV_BGR2RGB);
-    cv::Size re_size = resize(sample.cols, sample.rows);
-    cv::resize(sample, sample, re_size, 0.0, 0.0, cv::INTER_LINEAR);
-    sample.convertTo(frames[i], CV_32F);
-    cv::Scalar mean = cv::mean(frames[i]);
-    frames[i] = frames[i] - mean;
-    frames[i] = frames[i] / 255.0;
+    frames[i] = cv::imread(filepath.str(), cv::IMREAD_COLOR);
+    // cv::Size re_size = resize(frames[i].size().width,
+    // frames[i].size().height);
+    float resize_factor =
+        std::max(static_cast<float>(MIN_SIZE) / frames[i].size().width,
+                 static_cast<float>(MIN_SIZE) / frames[i].size().height);
+    cv::resize(frames[i], frames[i], cv::Size(), resize_factor, resize_factor,
+               cv::INTER_LINEAR);
+    cv::Mat sample;
+    frames[i].convertTo(sample, CV_32S);
+    cv::Scalar mean = cv::mean(sample);
+    // double mean_all = (mean[0] + mean[1] + mean[2]) / 3.0;
+    sample = sample - mean;
+    // XXX: Following line seems like it doesn't work as intended with negative
+    // values.
+    // sample = sample / 255.0
     cv::Size size(FRAME_WIDTH, FRAME_HEIGHT);
-    cv::Rect crop(cv::Point(0.5 * (frames[i].cols - FRAME_WIDTH),
-                            0.5 * (frames[i].rows - FRAME_HEIGHT)),
+    cv::Rect crop(cv::Point(0.5 * (sample.size().width - FRAME_WIDTH),
+                            0.5 * (sample.size().height - FRAME_HEIGHT)),
                   size);
-    frames[i] = frames[i](crop);
+    sample = sample(crop);
+    sample.convertTo(frames[i], CV_32F, 1.0 / 255);
     cv::imshow("", frames[i]);
     cv::waitKey(30);
   }
@@ -83,28 +93,43 @@ std::vector<cv::Mat> readFrames(std::string video_path, int frame_count) {
 
 void convertToTensorProto(std::vector<cv::Mat> &frames,
                           tensorflow::TensorProto &proto) {
-  // tensorflow::TensorProto proto;
   const size_t frame_data_size =
       BATCH_SIZE * FRAME_NUM * FRAME_WIDTH * FRAME_HEIGHT * FRAME_CHANNEL;
   uchar *const frame_data = new uchar[frame_data_size * sizeof(float)];
   uchar *dst = frame_data;
   for (auto frame : frames) {
-    if (frame.isContinuous()) {
+    if (!frame.isContinuous()) {
       std::cerr << "Frame is not continous " << std::endl;
+      throw std::bad_alloc();
     }
+
+    // Way:1
     uchar *src = frame.data;
-    int size = frame.size().width * frame.size().height * frame.channels();
-    // proto.add_string_val(data, size * sizeof(float));
-    memcpy(dst, src, size * sizeof(float));
+    int size = frame.total() * frame.elemSize();
+
+    // Way:2
+    // std::vector<float> src;
+    // if (frame.isContinuous()) {
+    //   src.assign((float *)frame.datastart, (float *)frame.dataend);
+    // } else {
+    //   for (int i = 0; i < frame.rows; ++i) {
+    //     src.insert(src.end(), frame.ptr<float>(i),
+    //                frame.ptr<float>(i) + frame.cols);
+    //   }
+    // }
+
+    memcpy(dst, src, size);
     dst += size;
   }
 
-  proto.set_tensor_content(std::string(reinterpret_cast<char *>(frame_data),
-                                       frame_data_size * sizeof(float)));
   proto.set_dtype(tensorflow::DT_FLOAT);
   for (int i = 0; i < TENSOR_DIM; ++i) {
     proto.mutable_tensor_shape()->add_dim()->set_size(tensor_shape[i]);
   }
+  // proto.set_tensor_content(std::string(reinterpret_cast<char
+  // *>(frame_data),
+  //                                      frame_data_size * sizeof(float)));
+  proto.set_tensor_content(frame_data, frame_data_size * sizeof(float));
   delete[] frame_data;
   return;
 }
@@ -198,7 +223,7 @@ int main(int argc, char **argv) {
   const std::string model_signature_name = "predict_images";
 
   std::string server = "localhost:8500";
-  std::string video_path = "/home/vinod/action_stream/server/test/smoking/";
+  std::string video_path = "/home/vinod/action_stream/server/test/wrestling/";
 
   std::cout << "calling prediction service on " << server << std::endl;
 
